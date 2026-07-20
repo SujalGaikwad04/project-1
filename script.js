@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initVideoLightbox();
     initContactForm();
     init3DTilt();
+    initBgParticles();
 });
 
 /**
@@ -361,7 +362,7 @@ function initVideoLightbox() {
         card.addEventListener('click', () => {
             // If it is the floating hero play badge, play default showcase video
             if (card.classList.contains('parallax-play-badge')) {
-                openModal('W7P_4mH59lY', 'Editkaro.in Agency Showreel', 'A comprehensive showcase of our creative editing, cinematic timing, and post-production capabilities.');
+                openModal('9bZkp7q19f0', 'Editkaro.in Agency Showreel', 'A comprehensive showcase of our creative editing, cinematic timing, and post-production capabilities.');
                 return;
             }
 
@@ -547,4 +548,79 @@ function init3DTilt() {
             startLoop(this);
         });
     });
+}
+
+/* =========================================================
+   AMBIENT BACKGROUND PARTICLES
+   Subtle floating dust particles on fixed canvas.
+   ========================================================= */
+function initBgParticles() {
+    const canvas = document.getElementById('bg-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+    canvas.width = W;
+    canvas.height = H;
+
+    window.addEventListener('resize', () => {
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+    });
+
+    const PARTICLE_COUNT = 55;
+    const particles = [];
+
+    class Particle {
+        constructor() { this.reset(true); }
+        reset(init = false) {
+            this.x = Math.random() * W;
+            this.y = init ? Math.random() * H : H + 10;
+            this.size = Math.random() * 1.5 + 0.4;
+            this.speedY = -(Math.random() * 0.35 + 0.1);
+            this.speedX = (Math.random() - 0.5) * 0.15;
+            this.opacity = 0;
+            this.maxOpacity = Math.random() * 0.35 + 0.05;
+            this.fadeIn = true;
+            this.life = 0;
+            this.maxLife = Math.random() * 400 + 200;
+        }
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.life++;
+            if (this.fadeIn) {
+                this.opacity += 0.005;
+                if (this.opacity >= this.maxOpacity) this.fadeIn = false;
+            } else {
+                this.opacity -= 0.001;
+            }
+            if (this.opacity <= 0 || this.y < -10 || this.life > this.maxLife) {
+                this.reset();
+            }
+        }
+        draw() {
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, this.opacity);
+            ctx.fillStyle = '#e53935';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animate);
+    }
+    animate();
 }

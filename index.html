@@ -16,6 +16,15 @@
 <body>
 
     <!-- ==========================================
+         AMBIENT BACKGROUND LAYERS
+         ========================================== -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="bg-dot-grid"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+
+    <!-- ==========================================
          PRELOADER SCREEN
          ========================================== -->
     <div id="preloader">
@@ -65,7 +74,7 @@
             <div class="hero-left">
                 <span class="hero-num">01 / INTRODUCTION</span>
                 <h1 class="hero-title">WE EDIT<br>SCROLL-STOPPING<br>STORIES.</h1>
-                <p class="hero-desc">We are Editkaro.in—a high-end post-production and social growth agency crafting cinematic, high-retention video edits that multiply engagement, views, and brand value.</p>
+                <p class="hero-desc">We are Editkaro.inâ€”a high-end post-production and social growth agency crafting cinematic, high-retention video edits that multiply engagement, views, and brand value.</p>
                 
                 <div class="hero-ctas">
                     <a href="#portfolio" class="btn btn-primary magnetic">Explore Work</a>
@@ -86,13 +95,13 @@
             <div class="hero-right" id="heroParallaxScene">
                 <!-- Overlapping Floating Thumbnail Stack -->
                 <div class="stack-card card-1" data-depth="0.15">
-                    <img src="https://img.youtube.com/vi/W7P_4mH59lY/hqdefault.jpg" alt="Urban Streetwear B-Roll">
+                    <img src="https://img.youtube.com/vi/9bZkp7q19f0/maxresdefault.jpg" alt="Urban Streetwear Promo" onerror="this.src='https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg'">
                 </div>
                 <div class="stack-card card-2" data-depth="0.3">
-                    <img src="https://img.youtube.com/vi/EngW7tLk6r8/hqdefault.jpg" alt="Tokyo Narrative Vlog">
+                    <img src="https://img.youtube.com/vi/UkH0ExaL-Mc/maxresdefault.jpg" alt="Cinematic Documentary" onerror="this.src='https://img.youtube.com/vi/UkH0ExaL-Mc/hqdefault.jpg'">
                 </div>
                 <div class="stack-card card-3" data-depth="0.45">
-                    <img src="https://img.youtube.com/vi/t3R_S6k15L8/hqdefault.jpg" alt="Valorant Cinematic Montage">
+                    <img src="https://img.youtube.com/vi/VQGCKyvzIM4/maxresdefault.jpg" alt="Anime AMV" onerror="this.src='https://img.youtube.com/vi/VQGCKyvzIM4/hqdefault.jpg'">
                 </div>
                 <!-- Interactive Play Dot -->
                 <div class="parallax-play-badge magnetic" data-depth="0.6">
@@ -127,14 +136,16 @@
             </div>
             
             <!-- Asymmetrical 12-Column Grid (alternate sizes for premium visual rhythm) -->
+            <!-- Asymmetrical 12-Column Grid (alternate sizes for premium visual rhythm) -->
             <div class="portfolio-grid scroll-reveal">
                 
-                <!-- 1. w-8 (Spans 8 columns) -->
-                <div class="portfolio-card w-8" data-category="ecommerce advertisement" data-video-id="W7P_4mH59lY">
+                <!-- 1. w-8 -->
+                <div class="portfolio-card w-8" data-category="ecommerce advertisement" data-video-id="9bZkp7q19f0">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">eCommerce Ad</span>
-                        <img src="https://img.youtube.com/vi/W7P_4mH59lY/hqdefault.jpg" alt="Urban Streetwear Promo" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/9bZkp7q19f0/maxresdefault.jpg" alt="Urban Streetwear Promo" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -143,28 +154,28 @@
                         <p class="portfolio-desc">High-energy commercial advertisement edit showcasing street fashion vibes.</p>
                     </div>
                 </div>
-                
-                <!-- 2. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="gaming short-form" data-video-id="t3R_S6k15L8">
+                <!-- 2. w-4 -->
+                <div class="portfolio-card w-4" data-category="gaming short-form" data-video-id="MmB9b5njVbA">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Gaming Reel</span>
-                        <img src="https://img.youtube.com/vi/t3R_S6k15L8/hqdefault.jpg" alt="Epic Valorant Cinematic" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/MmB9b5njVbA/maxresdefault.jpg" alt="Epic Gaming Cinematic" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/MmB9b5njVbA/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
                     <div class="portfolio-details">
-                        <h3 class="portfolio-title">Epic Valorant Cinematic</h3>
+                        <h3 class="portfolio-title">Epic Gaming Cinematic</h3>
                         <p class="portfolio-desc">Fast-paced gaming montage with seamless audio sync and glow adjustments.</p>
                     </div>
                 </div>
-
-                <!-- 3. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="football short-form" data-video-id="m5y4Nn758k0">
+                <!-- 3. w-4 -->
+                <div class="portfolio-card w-4" data-category="football short-form" data-video-id="k03ItJaVLuE">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Football Edit</span>
-                        <img src="https://img.youtube.com/vi/m5y4Nn758k0/hqdefault.jpg" alt="Cristiano Ronaldo The Last Dance" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/k03ItJaVLuE/maxresdefault.jpg" alt="Ronaldo Skills" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/k03ItJaVLuE/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -173,28 +184,28 @@
                         <p class="portfolio-desc">Rhythm-synced athletic compilation highlighting dynamic transitions.</p>
                     </div>
                 </div>
-
-                <!-- 4. w-8 (Spans 8 columns) -->
-                <div class="portfolio-card w-8" data-category="long-form documentary color-grading" data-video-id="EngW7tLk6r8">
+                <!-- 4. w-8 -->
+                <div class="portfolio-card w-8" data-category="long-form documentary color-grading" data-video-id="UkH0ExaL-Mc">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Documentary</span>
-                        <img src="https://img.youtube.com/vi/EngW7tLk6r8/hqdefault.jpg" alt="Tokyo Cinematic Travel Vlog" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/UkH0ExaL-Mc/maxresdefault.jpg" alt="Cinematic Travel" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/UkH0ExaL-Mc/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
                     <div class="portfolio-details">
                         <h3 class="portfolio-title">Lost in Tokyo</h3>
-                        <p class="portfolio-desc">Cinematic documentary vlog utilizing stylized teal & orange color grading.</p>
+                        <p class="portfolio-desc">Cinematic documentary vlog utilizing stylized teal &amp; orange color grading.</p>
                     </div>
                 </div>
-
-                <!-- 5. w-6 (Spans 6 columns) -->
-                <div class="portfolio-card w-6" data-category="anime color-grading short-form" data-video-id="K19bEqK3e4Q">
+                <!-- 5. w-6 -->
+                <div class="portfolio-card w-6" data-category="anime color-grading short-form" data-video-id="VQGCKyvzIM4">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Anime AMV</span>
-                        <img src="https://img.youtube.com/vi/K19bEqK3e4Q/hqdefault.jpg" alt="Anime Mix Sparkle AMV" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/VQGCKyvzIM4/maxresdefault.jpg" alt="Anime Mix AMV" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/VQGCKyvzIM4/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -203,13 +214,13 @@
                         <p class="portfolio-desc">Award-winning anime music video edit with dynamic zoom speed ramping.</p>
                     </div>
                 </div>
-
-                <!-- 6. w-6 (Spans 6 columns) -->
-                <div class="portfolio-card w-6" data-category="ecommerce advertisement" data-video-id="v3_w9XmXg2E">
+                <!-- 6. w-6 -->
+                <div class="portfolio-card w-6" data-category="ecommerce advertisement" data-video-id="Q7lKtzEE1ec">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Product Ad</span>
-                        <img src="https://img.youtube.com/vi/v3_w9XmXg2E/hqdefault.jpg" alt="Minimalist Wireless Earbuds" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/Q7lKtzEE1ec/maxresdefault.jpg" alt="Product Commercial" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/Q7lKtzEE1ec/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -218,13 +229,13 @@
                         <p class="portfolio-desc">Sleek, corporate product commercial highlight with focus on sound layers.</p>
                     </div>
                 </div>
-
-                <!-- 7. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="gaming color-grading" data-video-id="A63UyG_Kkbo">
+                <!-- 7. w-4 -->
+                <div class="portfolio-card w-4" data-category="gaming color-grading" data-video-id="QkkoHAzjnUs">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Gaming Trailer</span>
-                        <img src="https://img.youtube.com/vi/A63UyG_Kkbo/hqdefault.jpg" alt="Cyberpunk 2077 Fan Cut" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/QkkoHAzjnUs/maxresdefault.jpg" alt="Cyberpunk Fan Cut" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/QkkoHAzjnUs/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -233,13 +244,13 @@
                         <p class="portfolio-desc">Glitch transition editing and heavy neon saturation for a futuristic trailer cut.</p>
                     </div>
                 </div>
-
-                <!-- 8. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="football color-grading" data-video-id="97_q5Q0Xyzo">
+                <!-- 8. w-4 -->
+                <div class="portfolio-card w-4" data-category="football color-grading" data-video-id="qIPHPHjlmXU">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Football Edit</span>
-                        <img src="https://img.youtube.com/vi/97_q5Q0Xyzo/hqdefault.jpg" alt="Lionel Messi Pure Magic" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/qIPHPHjlmXU/maxresdefault.jpg" alt="Messi Pure Magic" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/qIPHPHjlmXU/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -248,13 +259,13 @@
                         <p class="portfolio-desc">Smooth keyframe motion tracking and highlight compilation of Messi's dribbles.</p>
                     </div>
                 </div>
-
-                <!-- 9. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="long-form documentary" data-video-id="L95_R7xWjZc">
+                <!-- 9. w-4 -->
+                <div class="portfolio-card w-4" data-category="long-form documentary" data-video-id="XY8rBQ5VByw">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Video Essay</span>
-                        <img src="https://img.youtube.com/vi/L95_R7xWjZc/hqdefault.jpg" alt="Rise of AI Documentary" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/XY8rBQ5VByw/maxresdefault.jpg" alt="Documentary" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/XY8rBQ5VByw/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -263,13 +274,13 @@
                         <p class="portfolio-desc">Cinematic documentary style cut featuring overlays and immersive sound layout.</p>
                     </div>
                 </div>
-
-                <!-- 10. w-8 (Spans 8 columns) -->
-                <div class="portfolio-card w-8" data-category="color-grading short-form" data-video-id="wTcNtgA6gHs">
+                <!-- 10. w-8 -->
+                <div class="portfolio-card w-8" data-category="color-grading short-form" data-video-id="LXb3EKWsInQ">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Cinematic B-Roll</span>
-                        <img src="https://img.youtube.com/vi/wTcNtgA6gHs/hqdefault.jpg" alt="Coffee Shop B-Roll Session" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/LXb3EKWsInQ/maxresdefault.jpg" alt="Coffee Shop B-Roll" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/LXb3EKWsInQ/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -278,13 +289,13 @@
                         <p class="portfolio-desc">Earthy color tone grading and high-fidelity sound effects of morning brewing.</p>
                     </div>
                 </div>
-
-                <!-- 11. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="anime gaming" data-video-id="Btdj5BwV92U">
+                <!-- 11. w-4 -->
+                <div class="portfolio-card w-4" data-category="anime gaming" data-video-id="5NV6Rdv1a3I">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Anime Gaming Mix</span>
-                        <img src="https://img.youtube.com/vi/Btdj5BwV92U/hqdefault.jpg" alt="Attack on Titan AMV" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/5NV6Rdv1a3I/maxresdefault.jpg" alt="Attack on Titan AMV" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/5NV6Rdv1a3I/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -293,13 +304,13 @@
                         <p class="portfolio-desc">Aggressive battle scene editing synced with heavy beat hits.</p>
                     </div>
                 </div>
-
-                <!-- 12. w-8 (Spans 8 columns) -->
-                <div class="portfolio-card w-8" data-category="ecommerce advertisement" data-video-id="2q74UvD0aI0">
+                <!-- 12. w-8 -->
+                <div class="portfolio-card w-8" data-category="ecommerce advertisement" data-video-id="R2mfqMYGByI">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Brand Promo</span>
-                        <img src="https://img.youtube.com/vi/2q74UvD0aI0/hqdefault.jpg" alt="Luxury Watch Commercial" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/R2mfqMYGByI/maxresdefault.jpg" alt="Luxury Brand Commercial" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/R2mfqMYGByI/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -308,13 +319,13 @@
                         <p class="portfolio-desc">High-end product macro shots, typography layout, and color profile correction.</p>
                     </div>
                 </div>
-
-                <!-- 13. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="football short-form" data-video-id="Hse4mD2jZis">
+                <!-- 13. w-4 -->
+                <div class="portfolio-card w-4" data-category="football short-form" data-video-id="mMvhAEYHlAg">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Football Shorts</span>
-                        <img src="https://img.youtube.com/vi/Hse4mD2jZis/hqdefault.jpg" alt="Neymar Jr Samba Skills" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/mMvhAEYHlAg/maxresdefault.jpg" alt="Neymar Jr Samba" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/mMvhAEYHlAg/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -323,13 +334,13 @@
                         <p class="portfolio-desc">Dynamic speed manipulation and velocity transitions showcasing Samba steps.</p>
                     </div>
                 </div>
-
-                <!-- 14. w-6 (Spans 6 columns) -->
-                <div class="portfolio-card w-6" data-category="documentary color-grading" data-video-id="ScMzIvxBSi4">
+                <!-- 14. w-6 -->
+                <div class="portfolio-card w-6" data-category="documentary color-grading" data-video-id="zB4I68XVPzQ">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Drone Reel</span>
-                        <img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Exploring the Alps" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/zB4I68XVPzQ/maxresdefault.jpg" alt="Exploring the Alps" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/zB4I68XVPzQ/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -338,13 +349,13 @@
                         <p class="portfolio-desc">Cinematic landscape editing, exposure control, and vibrant mountain coloring.</p>
                     </div>
                 </div>
-
-                <!-- 15. w-6 (Spans 6 columns) -->
-                <div class="portfolio-card w-6" data-category="advertisement long-form" data-video-id="2aK858Nn91Y">
+                <!-- 15. w-6 -->
+                <div class="portfolio-card w-6" data-category="advertisement long-form" data-video-id="dQw4w9WgXcQ">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">SaaS Corporate</span>
-                        <img src="https://img.youtube.com/vi/2aK858Nn91Y/hqdefault.jpg" alt="SaaS Explainer Showcase" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="SaaS Explainer" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -353,13 +364,13 @@
                         <p class="portfolio-desc">Clean corporate promo combining motion graphic vectors and software panels.</p>
                     </div>
                 </div>
-
-                <!-- 16. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="gaming short-form" data-video-id="qEvfN_b-Gis">
+                <!-- 16. w-4 -->
+                <div class="portfolio-card w-4" data-category="gaming short-form" data-video-id="jfKfPfyJRdk">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">FPS Montage</span>
-                        <img src="https://img.youtube.com/vi/qEvfN_b-Gis/hqdefault.jpg" alt="COD Warzone Highlight" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/jfKfPfyJRdk/maxresdefault.jpg" alt="Lofi Chill" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -368,13 +379,13 @@
                         <p class="portfolio-desc">High-frequency screenshake edits and sound syncing for tactical game clips.</p>
                     </div>
                 </div>
-
-                <!-- 17. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="long-form documentary" data-video-id="8Kk_QG7Tz7E">
+                <!-- 17. w-4 -->
+                <div class="portfolio-card w-4" data-category="long-form documentary" data-video-id="GNVJb3TGqqY">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Nature Documentary</span>
-                        <img src="https://img.youtube.com/vi/8Kk_QG7Tz7E/hqdefault.jpg" alt="The Sahara Wildlife Edit" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/GNVJb3TGqqY/maxresdefault.jpg" alt="Wildlife Edit" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/GNVJb3TGqqY/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -383,13 +394,13 @@
                         <p class="portfolio-desc">Creative documentary compilation tracking desert wildlife in high detail.</p>
                     </div>
                 </div>
-
-                <!-- 18. w-4 (Spans 4 columns) -->
-                <div class="portfolio-card w-4" data-category="color-grading long-form" data-video-id="jNQXAC9IVRw">
+                <!-- 18. w-4 -->
+                <div class="portfolio-card w-4" data-category="color-grading long-form" data-video-id="kJQP7kiw5Fk">
                     <div class="portfolio-thumbnail-wrapper">
                         <span class="portfolio-badge">Travel Vlog</span>
-                        <img src="https://img.youtube.com/vi/jNQXAC9IVRw/hqdefault.jpg" alt="Street Food Journey India" class="portfolio-thumbnail" loading="lazy">
+                        <img src="https://img.youtube.com/vi/kJQP7kiw5Fk/maxresdefault.jpg" alt="Street Food Journey" class="portfolio-thumbnail" loading="lazy" onerror="this.src='https://img.youtube.com/vi/kJQP7kiw5Fk/hqdefault.jpg'">
                         <div class="portfolio-overlay">
+                            <div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
                             <span class="card-action-txt">Play Showreel</span>
                         </div>
                     </div>
@@ -401,6 +412,7 @@
 
             </div>
         </div>
+    </section>
     </section>
 
     <!-- ==========================================
@@ -582,7 +594,7 @@
                 <div class="testimonial-col scroll-reveal">
                     <div class="testimonial-editorial-card">
                         <div class="review-meta">
-                            <span class="review-stars">★★★★★</span>
+                            <span class="review-stars">â˜…â˜…â˜…â˜…â˜…</span>
                         </div>
                         <p class="review-content">"Editkaro revolutionized our social presence! The pacing of their short-form edits is unreal. Our Instagram reach multiplied by 8x in just under 2 months."</p>
                         <div class="review-author">
@@ -599,7 +611,7 @@
                 <div class="testimonial-col scroll-reveal delay-1">
                     <div class="testimonial-editorial-card offset-y">
                         <div class="review-meta">
-                            <span class="review-stars">★★★★★</span>
+                            <span class="review-stars">â˜…â˜…â˜…â˜…â˜…</span>
                         </div>
                         <p class="review-content">"We've worked with multiple editors, but the color grading and product sound design Editkaro produced for our eCommerce campaigns doubled our sales conversions instantly."</p>
                         <div class="review-author">
@@ -616,7 +628,7 @@
                 <div class="testimonial-col scroll-reveal delay-2">
                     <div class="testimonial-editorial-card">
                         <div class="review-meta">
-                            <span class="review-stars">★★★★★</span>
+                            <span class="review-stars">â˜…â˜…â˜…â˜…â˜…</span>
                         </div>
                         <p class="review-content">"As a YouTube creator, editing was consuming 80% of my time. Handing over my raw timelines to Editkaro freed me up to scale my content while improving retention rates."</p>
                         <div class="review-author">
